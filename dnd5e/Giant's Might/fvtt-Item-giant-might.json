@@ -168,7 +168,7 @@
           "_id": null,
           "name": "Giant's Might",
           "type": "script",
-          "author": "CAM1fq5cqUb8GsrR",
+          "author": "xunto",
           "img": "icons/svg/dice-target.svg",
           "scope": "global",
           "command": "let on = args[0] == \"on\";\nlet tokenId = args[1][\"tokenId\"]\n\nlet token = game.canvas.tokens.get(tokenId);\n\nif (on) {\n    token.document.update({\"width\": 2, \"height\": 2});\n} else {\n    token.document.update({\"width\": 1, \"height\": 1});\n}",

@@ -205,7 +205,7 @@
           "_id": null,
           "name": "Berserker Curse",
           "type": "script",
-          "author": "CAM1fq5cqUb8GsrR",
+          "author": "xunto",
           "img": "icons/svg/dice-target.svg",
           "scope": "global",
           "command": "const EFFECT_NAME = \"Berserker Rage\";\n\n// Check if actor failed the saving throw\nlet isFailed = args[0][\"failedSaves\"].length > 0;\n\nlet curse = actor.effects.find(i => i.data.label === EFFECT_NAME);\n\nif (curse) {\n    await actor.updateEmbeddedDocuments(\"ActiveEffect\", [{\"_id\": curse.id, \"disabled\": !isFailed}]);\n} else {\n    ui.notifications.error(`Effect \\\"${EFFECT_NAME}\\\" not found.`);\n}",
